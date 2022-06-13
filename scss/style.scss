@@ -1,0 +1,97 @@
+@import "nullstyle.scss";
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@200;700&display=swap');
+
+body {
+    font-size: 100%;
+    font-family: 'Raleway', sans-serif;
+    background-color: #8EC5FC;
+    background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%);
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+}
+
+.mainblock {
+    width: 992px;
+    height: 648px;
+    background: #fff;
+    border-radius: 50px;
+    padding: 40px 50px;
+}
+
+.todo__header {
+    text-align: center;
+    font-size: 1.5rem;
+    margin-bottom: 25px;
+}
+
+.todo__inputs {
+    padding: 0 20px;
+    width: 100%;
+    display: grid;
+    grid-auto-flow: column;
+    margin-bottom: 30px;
+}
+
+#myInput {
+    width: 500px;
+    font-size: 1.2rem;
+    height: 35px;
+    border: solid 1px rgb(214, 214, 214);
+    border-radius: 15px;
+    padding-left: 10px;
+}
+
+.addBtn {
+    width: 80px;
+    height: 35px;
+}
+
+.list__container {
+    width: 100%;
+    height: 460px;
+    display: flex;
+    justify-content: center;
+}
+
+.todo__list {
+    border: solid 1px #c5dcf3;
+    width: 100%;
+    border-radius: 30px;
+    overflow-y: scroll;
+}
+
+.todo__list>li:not(.checked):hover {
+    transform: translateX(10px);
+    transition-duration: 0.2s;
+}
+
+.todo__list::-webkit-scrollbar {
+    width: 0px;
+}
+
+.todo__list>li {
+    position: relative;
+    height: 60px;
+    padding: 20px 0 0 40px;
+    cursor: pointer;
+    border-bottom: solid 1px #e9e9e9;
+}
+
+
+.todo__list>li>span {
+    font-size: 1.7rem;
+    position: absolute;
+    right: 30px;
+    top: 15px;
+}
+
+.checked {
+    text-decoration: line-through;
+    background-color: rgb(229, 250, 223);
+}
